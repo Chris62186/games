@@ -10,6 +10,21 @@
 
 }
 
+.counter-title {
+  font-family: 'Indie Flower', cursive;
+  color: #fff;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+
+}
+
+.counter {
+  font-size: 3rem;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+  margin: 0 auto;
+}
+
 body {
   background-color: #393E46;
 }
