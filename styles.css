@@ -115,5 +115,6 @@ a .game-card-play-button  {
 
   .game-card {
     width: 100%;
+    border-radius: 0;
   }
 }
