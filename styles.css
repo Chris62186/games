@@ -108,7 +108,7 @@ a .game-card-play-button  {
   font-weight: bold;
 }
 
-@media only screen and (max-device-width : 480px) {
+@media only screen and (max-device-width : 780px) {
   .row {
     flex-direction: column;
   }
