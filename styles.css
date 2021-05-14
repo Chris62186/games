@@ -112,4 +112,8 @@ a .game-card-play-button  {
   .row {
     flex-direction: column;
   }
+
+  .game-card {
+    width: 100%;
+  }
 }
