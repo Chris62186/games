@@ -15,12 +15,14 @@ $(document).on("keypress", function(){
 })
 
 $(".btn").on("click", function () {
-  var userChosenColor = this.id;
-  userClickedPattern.push(userChosenColor);
-  console.log(userClickedPattern);
-  playSound(userChosenColor);
-  animatePress(userChosenColor);
-  checkAnswer(userClickedPattern.length-1);
+  if(started) {
+    var userChosenColor = this.id;
+    userClickedPattern.push(userChosenColor);
+    console.log(userClickedPattern);
+    playSound(userChosenColor);
+    animatePress(userChosenColor);
+    checkAnswer(userClickedPattern.length-1);
+  }
 });
 
 function checkAnswer (currentLevel) {
