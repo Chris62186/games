@@ -10,13 +10,19 @@ diceP2 = randomizeDice();
 document.querySelector(".img1").setAttribute("src", "images/dice" + diceP1 + ".png");
 document.querySelector(".img2").setAttribute("src", "images/dice" + diceP2 + ".png");
 
+//If game hasn't started, display instructions
 if (!gameActive) {
   document.querySelector("h1").innerHTML = "Press Space to Roll";
 }
 
+//Each time a key is pressed, make sound, roll dice, change images, and process results
 document.addEventListener("keydown", function() {
 
   gameActive = true;
+
+  var diceRollAudio = new Audio("music/dice-roll.mp3");
+  diceRollAudio.volume = 0.05;
+  diceRollAudio.play();
 
   diceP1 = randomizeDice();
   diceP2 = randomizeDice();
