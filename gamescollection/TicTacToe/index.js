@@ -14,6 +14,7 @@ let gameNumber = 0;
 let xWins = 0;
 let oWins = 0;
 let xoTies = 0;
+let tieStreak = 0;
 
 const locationDescriptions = [
   "upper left",
@@ -165,6 +166,7 @@ function checkForWinCondition() {
   if (!gameWon) {
     if (turn === 9) {
       xoTies++;
+      tieStreak++;
       gameOver();
     } else {
       switchPlayer();
@@ -179,6 +181,7 @@ function gameOver() {
       tiles[victoryFormation[i]].classList.toggle("winning-tile");
     }
     gameMessageText.innerHTML = "Player " + currentPlayer + " WINS!";
+    activePlayerLabel.innerHTML = "";
     var winAudio = new Audio("sfx/win.wav");
     winAudio.play();
   } else {
@@ -223,7 +226,7 @@ function resetGame() {
     currentPlayer = startingPlayer;
     activePlayerLabel.innerHTML = "Board reset - Player " + startingPlayer + " begins.";
   } else {
-    if (currentPlayer === 'X') {
+    if (startingPlayer === 'X') {
       currentPlayer = 'O';
       gameMessageText.innerHTML = "";
       activePlayerLabel.innerHTML = "Player O - since it was a tie, you start this time."
