@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Raleway:wght@300&family=Rock+Salt&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <section class="container">
+      <h1>Tic Tac Toe</h1>
+      <h3>Welcome to Tic Tac Toe. First to 3 in a row wins. </h3>
+      <div class="board">
+        <div class="tile row-top col-left"></div>
+        <div class="tile row-top col-middle"></div>
+        <div class="tile row-top col-right"></div>
+        <div class="tile row-middle col-left"></div>
+        <div class="tile row-middle col-middle"></div>
+        <div class="tile row-middle col-right"></div>
+        <div class="tile row-bottom col-left"></div>
+        <div class="tile row-bottom col-middle"></div>
+        <div class="tile row-bottom col-right"></div>
+      </div>
+      <p><span class="message_center">Player X, click any square to begin.</span>  <span class="active_player"></span></p>
+      <button class="reset_btn disabled"type="button" name="button">Reset Board</button>
+      <div class="score_box">
+        <p>Total Games Played: <span id="gamesPlayed"></span>
+        <p>Won by X: <span id="xWon"></span></p>
+        <p>Won by O: <span id="oWon"></span></p>
+        <p>Ties: <span id="xoTie"></span></p>
+      </div>
+
+    </section>
+    <script src="index.js" charset="utf-8"></script>
+  </body>
+</html>
